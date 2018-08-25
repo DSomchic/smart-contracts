@@ -4,8 +4,9 @@ import "./ERC20.sol";
 import "./SafeMath.sol";
 
 contract Somchoice is ERC20 {
-    using SafeMath for uint256;
     
+    using SafeMath for uint256;
+
     mapping(address => uint256) internal balances;
     mapping (address => mapping (address => uint256)) private allowed;
     
