@@ -4,7 +4,20 @@ import "./somchoice.sol";
 
 contract Somchic is Somchoice {
     
+    struct Store {
+        string name;
+        string img;
+    }
+    
+    struct Product {
+        string name;
+        string img;
+        uint16 price;
+    }
+    
     mapping(address => bool) private isStore;
+    mapping(address => Store) private stores;
+    mapping(address => mapping(address => Store)) private products;
     
     event BuyToken(address buyer, uint256 amount, uint256 tokenBalance);
     event SellToken(uint256 weiReceived, uint256 tokenBalance);
