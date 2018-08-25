@@ -3,10 +3,10 @@ pragma solidity ^0.4.24;
 import "./ERC20.sol";
 import "./SafeMath.sol";
 
-contract Somchioce is ERC20 {
+contract Somchoice is ERC20 {
     using SafeMath for uint256;
     
-    mapping(address => uint256) private balances;
+    mapping(address => uint256) internal balances;
     mapping (address => mapping (address => uint256)) private allowed;
     
     uint256 private totalSupply_;
