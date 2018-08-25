@@ -4,23 +4,12 @@ import "./somchoice.sol";
 
 contract Somchic is Somchoice {
     
-    struct Store {
-        string name;
-        string img;
-    }
-    
-    struct Product {
-        string name;
-        string img;
-        uint16 price;
-    }
-    
     mapping(address => bool) private isStore;
-    mapping(address => Store) private stores;
-    mapping(address => mapping(address => Store)) private products;
     
     event BuyToken(address buyer, uint256 amount, uint256 tokenBalance);
     event SellToken(uint256 weiReceived, uint256 tokenBalance);
+    
+    uint256 campaignId = 1;
     
     function buyToken () payable public returns (bool){
         require(msg.value > 0);
@@ -42,6 +31,7 @@ contract Somchic is Somchoice {
     
     function _burnToken (address _storeAddr, uint256 _amount) private {
         require(_storeAddr == msg.sender);
+        require(balances[_storeAddr] >= _amount);
         balances[_storeAddr] = balances[_storeAddr].sub(_amount);
     }
 }

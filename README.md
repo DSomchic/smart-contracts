@@ -4,7 +4,7 @@ Decentralized customer loyalty program.
 
 ## Network
 
-Kovan contract address : [0xE88e2435CF769B928c70f06b3292330bCbD3d450](https://kovan.etherscan.io/address/0xe88e2435cf769b928c70f06b3292330bcbd3d450)
+Kovan contract address : [0x0cdfbC021DCC4e35Df39a1e2a267fcF5a8daFad3](https://kovan.etherscan.io/address/0x0cdfbC021DCC4e35Df39a1e2a267fcF5a8daFad3)
 
 ## Public functions
 ```js
@@ -14,7 +14,7 @@ function sellToken (uint256 _amount) public returns (bool) {};
 
 ## Token info
 
-Address: 0xE88e2435CF769B928c70f06b3292330bCbD3d450
+Address: 0x0cdfbC021DCC4e35Df39a1e2a267fcF5a8daFad3
 
 Symbol: SOMC
 
